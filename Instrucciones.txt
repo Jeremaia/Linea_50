@@ -1,0 +1,12 @@
+Usar enviroment que contiene todas las librerias a utilizar
+    .\env\Scripts\activate
+
+En caso de no usar el enviroment instalar las siguientes librerias
+    pip install django
+
+
+
+Para hacer modificaciones en la base de datos:
+    python manage.py makemigrations   #Realizar migraciones a la base de datos
+    python manage.py migrate   #Aplicar los cambios / Realizar commit
+
