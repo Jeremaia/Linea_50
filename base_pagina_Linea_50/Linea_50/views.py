@@ -1,5 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Ejemplo de vistas
+"""
+class YourView(request):
+    return render(request, 'yourappname/yourtemplate.html')
+"""
 
-#TODO: Crear las vistas para cargar los templates
+# TODO: Crear las vistas para cargar los templates
