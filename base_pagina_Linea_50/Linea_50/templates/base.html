@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <!-- TODO: Ver posibilidad de hacer que el header se quede estatico y siga mientras se 
+    scrollea, no es prioritario -->
+    <header>
+        <nav>
+            <ul>
+                <!-- TODO: Redirigir a las zonas del main correspondientes -->
+                <li><a href="#"><img src="{% static 'img/linea.png' %}" alt="Logo"></a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Nuestra Misión</a></li>
+                <li><a href="#">Fundadores</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <div class="content">
+            {% block content %}
+            <!-- Informacion especifica del contenido de cada pagina -->
+            {% endblock %}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- TODO: Modificar toda el area del footer -->
+        <div class="footer-column">
+        <h4>Creadores</h4>
+        <!-- Informacion de los creadores -->
+        </div>
+        <div class="footer-column">
+        <h4>Redes Sociales</h4>
+        <!-- Agregar redes sociales asociadas -->
+        </div>
+    </footer>
+
+    </body>
+    </html>

@@ -22,4 +22,4 @@ class YourModel(models.Model):
         ordering = ['-field1']
 """
 
-# TODO: Crear los modelos de la base de datos
+# TODO: Implementar Firebase para la base de datos, leerlo con models e importarlo en las views

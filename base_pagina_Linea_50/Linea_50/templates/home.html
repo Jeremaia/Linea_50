@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Linea 50{% endblock %}
+
+{% block content %}
+<div class="productos">
+    <!-- TODO: Realizar un bucle con los productos en la firebase -->
+    <h1>Productos</h1>
+    <div class="producto_template">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+        <!-- TODO: Convertir texto en boton -->
+        <!-- TODO: Que el boton diriga a una modal window con tal de que se muestre por encima
+        los detalles del producto -->
+        <!-- TODO: Dar imagenes e informacion correspondiente a cada producto -->
+        <p>Producto</p>
+    </div>
+    <div class="producto_template">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+        <p>Producto</p>
+    </div>
+    <div class="producto_template">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+        <p>Producto</p>
+    </div>
+    <div class="producto_template">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+        <p>Producto</p>
+    </div>
+    <div class="producto_template">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+        <p>Producto</p>
+    </div>
+    <div class="producto_template">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+        <p>Producto</p>
+    </div>
+    <div class="producto_template">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+        <p>Producto</p>
+    </div>
+    <div class="producto_template">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+        <p>Producto</p>
+    </div>
+    <div class="producto_template">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+        <p>Producto</p>
+    </div>
+</div>
+
+
+<div class="fundadores">
+    <!-- TODO: Agregar Rol, descripcion, redes de contacto de los fundadores, al igual que 
+    posiblemente cambiar la font que utiliza el proyecto -->
+    <h1>Fundadores</h1>
+    <div class="fundador_template">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+        <p>Rol</p>
+        <p>Descripcion breve</p>
+        <p>Redes de contacto</p>
+    </div>
+    <div class="fundador_template">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+        <p>Rol</p>
+        <p>Descripcion breve</p>
+        <p>Redes de contacto</p>
+    </div>
+</div>
+
+
+<div class="mision">
+    <div class="mision_texto">
+        <h2>Nuestra Misión</h2>
+        <p>Descripcion breve</p>
+    </div>
+    <div class="mision_imagenes">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+        <img src="{% static 'img/linea.png' %}" alt="linea50">
+    </div>
+</div>
+{% endblock %}

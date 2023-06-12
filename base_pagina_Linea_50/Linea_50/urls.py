@@ -15,3 +15,7 @@ urlpatterns = [
 """
 
 # TODO: Ingresar Urls de la aplicacion
+
+urlpatterns = [
+    path('', views.home, name='home'),
+]
