@@ -123,3 +123,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Configuracion Firebase
+import firebase_admin
+from firebase_admin import credentials
+
+cred = credentials.Certificate('base_pagina_Linea_50\linea-50-temporal-firebase-adminsdk-7otdb-5ebceb2f05.json')
+firebase_admin.initialize_app(cred)

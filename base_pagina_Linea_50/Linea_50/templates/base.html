@@ -3,7 +3,7 @@
 <html>
 <head>
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}?{% now 'U' %}">
 </head>
 <body>
     <!-- Header -->
@@ -45,5 +45,7 @@
         </div>
     </footer>
 
-    </body>
-    </html>
+    <!-- Scripts -->
+    <script type="text/javascript" src="{% static 'scripts/modal.js' %}?{% now 'U' %}"></script>
+</body>
+</html>

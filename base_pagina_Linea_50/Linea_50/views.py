@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from google.cloud import firestore
+from django.shortcuts import render
+from firebase_admin import firestore
 
 # Ejemplo de vistas
 """
@@ -7,18 +7,20 @@ class YourView(request):
     return render(request, 'yourappname/yourtemplate.html')
 """
 
-# TODO: Cambiar el como funciona esta vista cuando se crea la base de datos con tal de que lea los datos
+db = firestore.client()
 
 def home(request):
-    """
-    db = firestore.Client()
+    # Obtener datos de la base de datos
     collection_ref = db.collection('Tipo-producto')
-    docs = collection_ref.stream()
+
+    # Almacenamiento de los datos
+    docs = collection_ref.get()
 
     data = []
+    cont = 0
     for doc in docs:
         data.append(doc.to_dict())
+        data[cont]['id'] = cont+1
+        cont += 1
 
-    print(data)
-    """
-    return render(request, 'home.html') #, {'data': data})
+    return render(request, 'home.html', {'productos': data})
