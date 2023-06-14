@@ -7,7 +7,7 @@
 <div class="productos">
     <!-- TODO: Realizar un bucle con los productos en la firebase -->
     <h1>Productos</h1>
-    <div class="producto_template">
+    <div id="2"class="producto_template">
         <img src="{% static 'img/linea.png' %}" alt="linea50">
         <!-- TODO: Convertir texto en boton -->
         <!-- TODO: Que el boton diriga a una modal window con tal de que se muestre por encima
@@ -53,18 +53,26 @@
 <div class="fundadores">
     <!-- TODO: Agregar Rol, descripcion, redes de contacto de los fundadores, al igual que 
     posiblemente cambiar la font que utiliza el proyecto -->
-    <h1>Fundadores</h1>
+    <h1 id="4">Fundadores</h1>
     <div class="fundador_template">
-        <img src="{% static 'img/linea.png' %}" alt="linea50">
-        <p>Rol</p>
-        <p>Descripcion breve</p>
-        <p>Redes de contacto</p>
+        <img src="{% static 'img/6.png' %}" >
+        <p>Tammy Johnson</p>
+        <p>CEO</p>
+        <div class="contenedor-imagen">
+            <a href="#" target="_blank">
+                <img src="{% static 'img/3.png' %}">
+              </a>
+          </div>
     </div>
     <div class="fundador_template">
-        <img src="{% static 'img/linea.png' %}" alt="linea50">
-        <p>Rol</p>
-        <p>Descripcion breve</p>
-        <p>Redes de contacto</p>
+        <img src="{% static 'img/5.png' %}" >
+        <p>David Hackett</p>
+        <p>CEO</p>
+        <div class="contenedor-imagen">
+            <a href="#" target="_blank">
+                <img src="{% static 'img/3.png' %}">
+              </a>
+          </div>
     </div>
 </div>
 
@@ -72,11 +80,11 @@
 <div class="mision">
     <div class="mision_texto">
         <h2>Nuestra Misión</h2>
-        <p>Descripcion breve</p>
+        <p>Somos una empresa la cual se dedica al reciclaje de implementacion usada en combate de incendio la cual se dio de baja y para que no cause</p>
     </div>
-    <div class="mision_imagenes">
-        <img src="{% static 'img/linea.png' %}" alt="linea50">
-        <img src="{% static 'img/linea.png' %}" alt="linea50">
+    <div id="3" class="mision_imagenes">
+        <img src="{% static 'img/images.png' %}">
+        <img src="{% static 'img/images (1).png' %}">
     </div>
 </div>
 {% endblock %}

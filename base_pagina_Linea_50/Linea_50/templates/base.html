@@ -9,15 +9,15 @@
     <!-- Header -->
     <!-- TODO: Ver posibilidad de hacer que el header se quede estatico y siga mientras se 
     scrollea, no es prioritario -->
-    <header>
+    <header class="header-container">
         <nav>
             <ul>
                 <!-- TODO: Redirigir a las zonas del main correspondientes -->
                 <li><a href="#"><img src="{% static 'img/linea.png' %}" alt="Logo"></a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Nuestra Misión</a></li>
-                <li><a href="#">Fundadores</a></li>
-                <li><a href="#">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#contacto">Nuestra Misión</a></li>
+                <li><a href="home.html#4">Fundadores</a></li>
+                <li><a href="#2">Productos</a></li>
                 <li><a href="#">Inicio</a></li>
             </ul>
         </nav>
@@ -36,12 +36,23 @@
     <footer>
         <!-- TODO: Modificar toda el area del footer -->
         <div class="footer-column">
-        <h4>Creadores</h4>
-        <!-- Informacion de los creadores -->
+            <div class="ubicacion">
+            <h4>Ubicacion</h4>
+            <img src="{% static 'img/4.png' %}" class="mapa-imagen">
+          </div>
         </div>
-        <div class="footer-column">
-        <h4>Redes Sociales</h4>
-        <!-- Agregar redes sociales asociadas -->
+        <div id="contacto" class="footer-column">
+        <h4 class="redes">Redes Sociales</h4>          
+        <div class="redes-sociales">
+            <a href="#" target="_blank">
+              <img src="{% static 'img/2.png' %}">
+            </a>
+            <a href="#" target="_blank">
+              <img src="{% static 'img/3.png' %}">
+            </a>
+            <!-- Agrega más íconos de redes sociales según sea necesario -->
+          </div>
+          
         </div>
     </footer>
 

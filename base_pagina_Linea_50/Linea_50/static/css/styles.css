@@ -6,10 +6,16 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     background-color: #FFFFFF;
-    color: #3D3D3D;
+    color: #000000;
     min-height: 100vh;
 }
-
+.header-container {
+    background-image: url("/static/img/1.png");
+    background-size: cover;
+    background-position: center;
+  
+  }
+  
 header {
     height: 25vh;
     background-color: #000000;
@@ -64,7 +70,44 @@ footer {
     margin: 0;
     padding: 2.5vh;
 }
-
+.redes-sociales {
+    position: fixed;
+    bottom: 20px; /* Ajusta el valor según tus necesidades */
+    left: -10px;
+    margin: 30px;
+    /* Otros estilos para los íconos de las redes sociales */
+  }
+  
+  .redes-sociales img {
+    width: 30px;
+    height: auto;
+  }
+  .redes-sociales img {
+    margin-right: 10px;
+  }
+  .redes-sociales {
+    display: flex;
+    align-items: center;
+  }
+  .contenedor-imagen {
+    text-align: center; /* Centrar la imagen y el texto */
+    width: 50px; /* Ajusta el ancho según tus necesidades */
+    height: auto; /* La altura se ajustará automáticamente según el ancho */
+    margin-left: 260px;
+  }
+  
+  .contacto-instagram {
+    margin-top: 10px; /* Ajusta el margen superior según tus necesidades */
+  }
+  
+  .mapa-imagen {
+    float: right;
+    margin-top: -80px;
+    width: 100%;
+    max-width: 250px; /* Ajusta el ancho máximo según tus necesidades */
+    height: auto;
+  }
+  
 /* Home styles */
 .productos {
     width: 100%;
@@ -157,4 +200,10 @@ footer {
     height: 50%;
     width: 100%;
     object-fit: cover;
+}
+.ubicacion {
+    margin-left: 1450px;
+}
+.redes{
+    margin-bottom: 1000px;
 }
