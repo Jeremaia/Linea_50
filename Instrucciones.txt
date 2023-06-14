@@ -7,28 +7,9 @@ Usar enviroment que contiene todas las librerias a utilizar
 En caso de no usar el enviroment instalar las siguientes librerias
     pip install django
 
-Para hacer modificaciones en la base de datos:
-    python manage.py makemigrations   #Realizar migraciones a la base de datos
-    python manage.py migrate   #Aplicar los cambios / Realizar commit
-
-
 Instalacion de Firebase
-    npm install firebase
-    npm install -g firebase-tools
+    pip install google-cloud-firestore / python -m pip install google-cloud-firestore
     python -m pip install firebase-admin
-    #TODO: Guardar en variables de entorno con tal de que no sea facilmente accessible
-    const firebaseConfig = {
-        apiKey: "AIzaSyDdxSbpz_u88PR_a7Si4BmZqZ88n1uMFXc",
-        authDomain: "linea-50-temporal.firebaseapp.com",
-        projectId: "linea-50-temporal",
-        storageBucket: "linea-50-temporal.appspot.com",
-        messagingSenderId: "591873525112",
-        appId: "1:591873525112:web:7bc131895e37ffbc2ef48d",
-        measurementId: "G-8CBGEZH11W"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
 
 Para subir imagenes a la base de datos exiten dos opciones, por url o base64 encode
 Lo ideal es usar url con imgur o similares

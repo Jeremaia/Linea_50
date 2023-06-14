@@ -5,48 +5,35 @@
 
 {% block content %}
 <div class="productos">
-    <!-- TODO: Realizar un bucle con los productos en la firebase -->
     <h1>Productos</h1>
+<<<<<<< HEAD
     <div id="2"class="producto_template">
         <img src="{% static 'img/linea.png' %}" alt="linea50">
         <!-- TODO: Convertir texto en boton -->
+=======
+    {% for producto in productos %}
+    <div class="producto_template">
+        <img src="{{ producto.ImagenUrl }}" alt="producto">
+>>>>>>> 5cf2ec4cb0bd065c85f73eb5177e7550afb56659
         <!-- TODO: Que el boton diriga a una modal window con tal de que se muestre por encima
         los detalles del producto -->
-        <!-- TODO: Dar imagenes e informacion correspondiente a cada producto -->
-        <p>Producto</p>
+        <button type="button" id="openModalBtn-{{ producto.id }}" data-modal-target="myModal-{{ producto.id }}">
+            {{ producto.Nombre }}
+        </button>
+
+        <!-- Modal -->
+        <div class="modal" id="myModal-{{ producto.id }}">
+            <div class="modal-content">
+                <span class="close-{{ producto.id }}">&times;</span>
+                <h2>{{ producto.Nombre }}</h2>
+                <img src="{{ producto.ImagenUrl }}" alt="producto">
+                <p>{{ producto.Descripcion }}</p>
+                <p>Precio: ${{ producto.Precio }}</p>
+                <p>Dimensiones: {{ producto.Dimensiones }}</p>
+            </div>
+        </div>
     </div>
-    <div class="producto_template">
-        <img src="{% static 'img/linea.png' %}" alt="linea50">
-        <p>Producto</p>
-    </div>
-    <div class="producto_template">
-        <img src="{% static 'img/linea.png' %}" alt="linea50">
-        <p>Producto</p>
-    </div>
-    <div class="producto_template">
-        <img src="{% static 'img/linea.png' %}" alt="linea50">
-        <p>Producto</p>
-    </div>
-    <div class="producto_template">
-        <img src="{% static 'img/linea.png' %}" alt="linea50">
-        <p>Producto</p>
-    </div>
-    <div class="producto_template">
-        <img src="{% static 'img/linea.png' %}" alt="linea50">
-        <p>Producto</p>
-    </div>
-    <div class="producto_template">
-        <img src="{% static 'img/linea.png' %}" alt="linea50">
-        <p>Producto</p>
-    </div>
-    <div class="producto_template">
-        <img src="{% static 'img/linea.png' %}" alt="linea50">
-        <p>Producto</p>
-    </div>
-    <div class="producto_template">
-        <img src="{% static 'img/linea.png' %}" alt="linea50">
-        <p>Producto</p>
-    </div>
+    {% endfor %}
 </div>
 
 
