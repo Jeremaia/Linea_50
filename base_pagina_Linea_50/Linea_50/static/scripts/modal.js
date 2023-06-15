@@ -1,63 +1,77 @@
-// TODO: Mejorar el codigo de javascript para que abra todos los modales y no solo el primero
+var modal1 = document.getElementById("myModal-1");
+var btn1 = document.getElementById("openModalBtn-1");
+var closeBtn1 = document.getElementById("closeBtn-1");
 
-// Obtener el modal
-var modal = document.getElementById("myModal-1");
+var modal2 = document.getElementById("myModal-2");
+var btn2 = document.getElementById("openModalBtn-2");
+var closeBtn2 = document.getElementById("closeBtn-2");
 
-// Obtener el boton
-var btn = document.getElementById("openModalBtn-1");
+var modal3 = document.getElementById("myModal-3");
+var btn3 = document.getElementById("openModalBtn-3");
+var closeBtn3 = document.getElementById("closeBtn-3");
 
-// Obtener el cerrar
-var closeBtn = modal.querySelector(".close");
+var modal4 = document.getElementById("myModal-4");
+var btn4 = document.getElementById("openModalBtn-4");
+var closeBtn4 = document.getElementById("closeBtn-4");
 
-// Funcion para abrir
-function openModal() {
-    modal.style.display = "block";
+// Abrir
+
+btn1.onclick = function() {
+    modal1.style.display = "block"; // Mostrar
 }
 
-// Funcion para cerrar
-function closeModal() {
-    modal.style.display = "none";
+btn2.onclick = function() {
+    modal2.style.display = "block"; // Mostrar
 }
 
-// Listeners
-btn.addEventListener("click", openModal);
-closeBtn.addEventListener("click", closeModal);
-
-/*  Pruebas para realizar bucle en los modales, y que se abran todos
-// Obtener el modal
-var modals = [modal1, modal2, modal3, modal4]
-for (var i = 0; i < 4; i++) {
-    modals = document.getElementById("myModal-" + (i+1));
+btn3.onclick = function() {
+    modal3.style.display = "block"; // Mostrar
 }
 
-// Obtener el boton
-var btns = [btn1, btn2, btn3, btn4]
-for (var i = 0; i < 4; i++) {
-    btns = document.getElementById("openModalBtn-" + (i+1));
+btn4.onclick = function() {
+    modal4.style.display = "block"; // Mostrar
 }
 
-// Obtener el cerrar
-var closeBtns = [closeBtn1, closeBtn2, closeBtn3, closeBtn4]
-for (var i = 0; i < 4; i++) {
-    closeBtns[i] = modal.querySelector(".close-" + (i+1));
+// Cerrar
+
+closeBtn1.onclick = function() {
+    modal1.style.display = "none"; // Esconder
 }
 
-// Funcion para abrir
-var openModals = [openModal1, openModal2, openModal3, openModal4]
-for (var i = 0; i < 4; i++) {
-    openModals[i] = function() {
-        modals[i].style.display = "block";
+closeBtn2.onclick = function() {
+    modal2.style.display = "none"; // Esconder
+}
+
+closeBtn3.onclick = function() {
+    modal3.style.display = "none"; // Esconder
+}
+
+closeBtn4.onclick = function() {
+    modal4.style.display = "none"; // Esconder
+}
+  
+// Cerrar al clickear afuera   
+
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal1.style.display = "none"; // Esconder al ser clickeado
     }
 }
 
-// Funcion para cerrar
-function closeModal() {
-    modal.style.display = "none";
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none"; // Esconder al ser clickeado
+    }
 }
 
-// Listeners
-for (var i = 0; i < 4; i++) {
-    btns[i].addEventListener("click", openModals[i]);
-    closeBtns[i].addEventListener("click", closeModal);
+window.onclick = function(event) {
+    if (event.target == modal3) {
+        modal3.style.display = "none"; // Esconder al ser clickeado
+    }
 }
-*/
+
+window.onclick = function(event) {
+    if (event.target == modal4) {
+        modal4.style.display = "none"; // Esconder al ser clickeado
+    }
+}
