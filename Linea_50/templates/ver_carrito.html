@@ -1,0 +1,11 @@
+<h1>Carrito de compras</h1>
+
+{% if items %}
+  <ul>
+    {% for item in items %}
+      <li>{{ item.producto.nombre }} - Cantidad: {{ item.cantidad }}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>El carrito está vacío.</p>
+{% endif %}

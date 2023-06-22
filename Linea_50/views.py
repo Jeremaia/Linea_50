@@ -1,11 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from firebase_admin import firestore
+from .models import Carrito, ItemCarrito, Producto
 
-# Ejemplo de vistas
-"""
-class YourView(request):
-    return render(request, 'yourappname/yourtemplate.html')
-"""
+def agregar_al_carrito(request, producto_id):
+    producto = Producto.objects.get(id=producto_id)
+    carrito, creado = Carrito.objects.get_or_create(usuario=request.user)
+    item, creado = ItemCarrito.objects.get_or_create(carrito=carrito, producto=producto)
+    # Aquí puedes realizar cualquier otra lógica que necesites, como incrementar la cantidad del producto en el carrito
+    return redirect('ver_carrito')
+
+def ver_carrito(request):
+    carrito = Carrito.objects.get(usuario=request.user)
 
 db = firestore.client()
 

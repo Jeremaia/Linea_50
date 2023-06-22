@@ -278,3 +278,7 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+.carrito {
+    width: 100%;
+    height: auto;
+}
